@@ -1,0 +1,109 @@
+:root {
+  --bg: #0b0f17;
+  --card: #121a2a;
+  --text: #e9eefc;
+  --muted: #b7c2e2;
+  --border: rgba(255,255,255,0.12);
+  --accent: #6ea8ff;
+  --danger: #ff6b6b;
+  --ok: #4ade80;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 600px at 30% 10%, rgba(110,168,255,0.18), transparent 60%),
+              var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.wrap { width: min(720px, 100%); }
+
+.card {
+  background: rgba(18, 26, 42, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 0 0 20px;
+  color: var(--muted);
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input[type="email"] {
+  flex: 1 1 260px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  outline: none;
+}
+
+input[type="email"]::placeholder { color: rgba(233,238,252,0.55); }
+
+input[type="email"]:focus {
+  border-color: rgba(110,168,255,0.65);
+  box-shadow: 0 0 0 4px rgba(110,168,255,0.18);
+}
+
+button {
+  flex: 0 0 auto;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(110,168,255,0.45);
+  background: rgba(110,168,255,0.18);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover { background: rgba(110,168,255,0.28); }
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.message {
+  margin: 12px 0 0;
+  min-height: 1.4em;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.message.ok { color: var(--ok); }
+.message.err { color: var(--danger); }
+
+.fineprint {
+  margin: 10px 0 0;
+  color: rgba(233,238,252,0.6);
+  font-size: 12px;
+}
