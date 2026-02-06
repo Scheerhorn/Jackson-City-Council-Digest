@@ -159,3 +159,11 @@ button:disabled {
     width: 100%;
   }
 }
+
+input[type="email"] {
+  font-size: 16px;          /* prevents iOS zoom */
+  line-height: 1.2;
+  padding: 0.6rem 0.75rem;
+  height: auto;
+  box-sizing: border-box;
+}
