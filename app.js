@@ -1,7 +1,6 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-// 1) Paste these from your Supabase project settings:
-//    Settings → API → Project URL + anon public key
+
 const SUPABASE_URL = "https://nufkabcwgaqlxnkpyyoq.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_bSyMGv9IOiq-HSJhf84HUw_fIe1qs5i";
 
@@ -18,7 +17,6 @@ function setMessage(text, type = "") {
 }
 
 function isValidEmail(email) {
-  // Simple, practical validation (not perfect, but good UX)
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
@@ -43,7 +41,6 @@ form.addEventListener("submit", async (e) => {
       .insert([{ email }]);
 
     if (error) {
-      // If email is unique, Supabase will error if already subscribed
       const msg =
         error.code === "23505"
           ? "That email is already subscribed."
