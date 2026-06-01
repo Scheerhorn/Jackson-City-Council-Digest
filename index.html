@@ -8,6 +8,36 @@
 </head>
 <body>
   <main class="wrap">
+
+    <section class="card latest-story" aria-labelledby="latest-title">
+      <h1 id="latest-title">Latest Story</h1>
+
+      <p class="subtitle">Read or listen to the newest City Council Digest.</p>
+
+      <a href="pdf/DealWTheDataCenter.pdf"
+        target="_blank"
+        class="pdf-link">
+        Latest Story PDF
+      </a>
+
+      <br><br>
+
+      <a href="pdf/DealWTheDataCenter.m4a"
+        target="_blank"
+        class="pdf-link">
+        Listen to the audio version
+      </a>
+
+      <br><br>
+
+      <audio controls>
+        <source src="pdf/DealWTheDataCenter.m4a" type="audio/mp4">
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <br>
+
     <section class="card" aria-labelledby="title">
       <h1 id="title">Jackson City Council Digest</h1>
 
@@ -51,9 +81,7 @@
         </div>
 
         <p id="message" class="message" role="status" aria-live="polite"></p>
-        <p class="fineprint">
-          No spam. Unsubscribe anytime.
-        </p>
+        <p class="fineprint">No spam. Unsubscribe anytime.</p>
       </form>
     </section>
 
@@ -89,7 +117,6 @@
         <div class="tier-desc">Update card, view invoices, or cancel</div>
       </a>
 
-
     </section>
 
   </main>
@@ -97,4 +124,3 @@
   <script type="module" src="./app.js"></script>
 </body>
 </html>
-
